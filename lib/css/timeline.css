@@ -1,0 +1,96 @@
+#timeLine {
+  font-size: 14px;
+  color: #333;
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px 0;
+}
+#timeLine:before {
+  content: '';
+  background-color: #ddd;
+  position: absolute;
+  left: 120px;
+  right: 650px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  margin: 0 auto;
+}
+#timeLine .timeline-year-container .timeline-year {
+  position: relative;
+  text-indent: 150px;
+  font-family: Georgia;
+  font-style: italic;
+  font-size: 24px;
+  font-weight: bold;
+  color: #06f;
+  height: 40px;
+  line-height: 40px;
+}
+#timeLine .timeline-year-container .timeline-year:before {
+  content: '';
+  position: absolute;
+  left: 120px;
+  right: 650px;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  margin: auto;
+  background-color: #fff;
+  border: 5px solid #06f;
+  border-radius: 50%;
+}
+#timeLine .timeline-year-container .timeline-day-container {
+  position: relative;
+}
+#timeLine .timeline-year-container .timeline-day-container:before {
+  content: '';
+  position: absolute;
+  left: 120px;
+  right: 650px;
+  top: 13px;
+  width: 10px;
+  height: 10px;
+  margin: 0 auto;
+  background-color: #666;
+  border-radius: 50%;
+}
+#timeLine .timeline-year-container .timeline-day-container .timeline-day {
+  width: 120px;
+  text-align: right;
+  padding: 8px 0;
+}
+#timeLine .timeline-year-container .timeline-day-container .timeline-message {
+  width: 650px;
+  margin-left: 30px;
+  padding: 8px 0;
+}
+@media screen and (max-width: 799px) {
+  #timeLine {
+    width: 320px;
+  }
+  #timeLine:before {
+    left: 65px;
+    right: 225px;
+  }
+  #timeLine .timeline-year-container .timeline-year {
+    text-indent: 95px;
+  }
+  #timeLine .timeline-year-container .timeline-year:before {
+    left: 65px;
+    right: 225px;
+  }
+  #timeLine .timeline-year-container .timeline-day-container:before {
+    left: 65px;
+    right: 225px;
+  }
+  #timeLine .timeline-year-container .timeline-day-container .timeline-day {
+    width: 65px;
+  }
+  #timeLine .timeline-year-container .timeline-day-container .timeline-message {
+    margin-left: 30px;
+    width: 225px;
+  }
+}

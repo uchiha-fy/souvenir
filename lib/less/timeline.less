@@ -1,0 +1,105 @@
+@import "_base.less";
+#timeLine{
+	font-size:14px;
+	color:#333;
+	width:@width;
+	margin:0 auto;
+	position:relative;
+	padding:10px 0;
+	&:before{
+		content:'';
+		background-color:#ddd;
+		position:absolute;
+		left:@left;
+		right:@width - @right;
+		top:0;bottom:0;
+		width:4px;
+		margin:0 auto;
+	}
+	.timeline-year-container{
+		.timeline-year{
+			position:relative;
+			text-indent:@right;
+			font-family:Georgia;
+			font-style:italic;
+			font-size:24px;
+			font-weight:bold;
+			color:#06f;
+			height:40px;
+			line-height:40px;
+			&:before{
+				content:'';
+				position:absolute;
+				left:@left;
+				right:@width - @right;
+				top:0;
+				bottom:0;
+				width:5px;
+				height:5px;
+				margin:auto;
+				background-color:#fff;
+				border:5px solid #06f;
+				border-radius:50%;
+			}
+		}
+		.timeline-day-container{
+			position:relative;
+			&:before{
+				content:'';
+				position:absolute;
+				left:@left;
+				right:@width - @right;
+				top:13px;
+				width:10px;
+				height:10px;
+				margin:0 auto;
+				background-color:#666;
+				border-radius:50%;
+			}
+			.timeline-day{
+				width:@left;
+				text-align:right;
+				padding:8px 0;
+			}
+			.timeline-message{
+				width:@width - @right;
+				margin-left:@right - @left;
+				padding:8px 0;
+			}
+		}
+	}
+}
+@media screen and (max-width: (@width - 1)){
+	@width:320px;
+	@left:65px;
+	@right:95px;
+	#timeLine{
+		width:@width;
+		&:before{
+			left:@left;
+			right:@width - @right;
+		}
+		.timeline-year-container{
+			.timeline-year{
+				text-indent:@right;
+				&:before{
+					left:@left;
+					right:@width - @right;
+				}
+			}
+			.timeline-day-container{
+				&:before{
+					left:@left;
+					right:@width - @right;
+				}
+				.timeline-day{
+					width:@left;
+				}
+				.timeline-message{
+					margin-left:@right - @left;
+					width:@width - @right;
+				}
+			}
+		}
+	}
+}
