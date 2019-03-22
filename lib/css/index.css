@@ -54,6 +54,7 @@ body {
 .controls .buttons .button {
   cursor: pointer;
   padding: 1px 0;
+  font-size: 16px;
 }
 .controls .buttons .button + .button {
   margin-top: 2px;
@@ -64,5 +65,8 @@ body {
   }
   .controls {
     bottom: 10px;
+  }
+  .controls .buttons .button {
+    padding: 1px 5px;
   }
 }
